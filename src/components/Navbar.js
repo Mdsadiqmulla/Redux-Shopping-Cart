@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div style={{display: 'flex', alignItem: 'space-between'}}>
-      <span className='logo'>Flipkart</span>
-      <div>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <span className='logo'>FlipKart</span>
+      <div style={{ marginLeft: '20px' }}>
         <Link className='navlink' to='/'>Home</Link>
-        <Link className='navlink' to='/cart'>Cart</Link>
+        <Link className='navlink' to='/cart' style={{ marginLeft: '10px' }}>Cart</Link>
         <span className='cartCount'>Cart item: 0</span>
       </div>
     </div>
