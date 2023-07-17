@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
       <span className='logo'>FlipKart</span>
       <div style={{ marginLeft: '20px' }}>
         <Link className='navlink' to='/'>Home</Link>

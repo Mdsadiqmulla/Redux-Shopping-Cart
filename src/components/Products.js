@@ -10,12 +10,24 @@ const Products = () => {
         const res = await fetch('https://fakestoreapi.com/products');
         const data = await res.json();
         console.log(data);
+
+        setproducts(data);
        }
-       fetchProducts() 
+       fetchProducts(); 
     },[])
-  return (
-    <div>Products</div>
-  )
-}
+  return <div className='productsWrapper'>
+      {
+        Products.map(product => (
+          <div className='card' key={product.id}>
+            <img src={product.image} alt=''/>
+            <h4>{product.title}</h4>
+            <h5>{product.price}</h5>
+            <button className='btn'>Add To Cart</button>
+          </div>
+        ))
+      }
+    </div>
+  
+};
 
 export default Products
